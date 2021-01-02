@@ -1,0 +1,21 @@
+<%-include('partials/header')%>
+    <h1>Home</h1>
+    <p>
+        <%=StartingContent %>
+    </p>
+
+
+
+    <% var posts%>
+        <% posts.forEach(element => { %>
+            <% const x= "/posts/"+(element.linkTitle); %>
+                <h3>
+                    <%=element.title%>
+                </h3>
+                <p>
+                    <%=element.shortBody %>
+                        <a href="/posts/<%=element.linkTitle %> ">Read More</a>
+                </p>
+
+                <%})%>
+                    <%-include('partials/footer')%>
